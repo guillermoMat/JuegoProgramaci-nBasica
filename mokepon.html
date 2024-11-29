@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GM</title>
+
+  <script src="./static/js/event.js"></script>
+  <link rel="stylesheet" href="./static/css/styles.css">
+
+</head>
+<body>
+  <nav  id="estilo-nav"></nav>
+  <h1 class="title1">Naruto Shippuden</h1>
+  <section id="seleccion-campeon">
+
+    <h2>Selecciona un jugador</h2>
+
+    <div class="tarjetas">
+    <input type="radio" name="campeones" id="naruto">
+    <label for="naruto">
+      <img src="./static/img/Naruto.jpg" alt="img-naruto">
+      <p>Naruto Uzumaki</p>
+
+
+    </label>
+
+
+    <input type="radio" name="campeones" id="itachi">
+    <label for="itachi">
+      <img src="./static/img/Itachi.png" alt="img-itachi">
+      <p>Itachi Uchiha</p>
+
+    </label>
+
+
+    <input type="radio" name="campeones" id="kakashi">
+    <label for="kakashi">
+      <img src="./static/img/Kakashi.png" alt="img-kakashi">
+      <p>Kakashi Hatake</p>
+    </label>
+    </div>
+
+  <div style="margin-top: 5px;">
+    <button id="opc-campeon">Elegir</button>
+  </div>
+  </section>
+
+  <section id="gameplay">
+
+
+
+
+  <section id="info-jugadores">
+    <div>
+
+    <p><span id="campeon-jg"></span></p>
+    <p>Vidas restantes:<span id="vidas-jugador">3</span></p>
+    <img src="" id="campeon-jg-img" alt="img-campeon">
+
+  </div>
+  <div id="div-ataques">
+    <h2>Elije los Ataques:</h2>
+
+    <button id="btn-fuego">🔥 Fuego</button>
+    <button id="btn-tierra">🌍 Tierra</button>
+    <button id="btn-agua">💧 Agua</button>
+
+  </div>
+
+
+  <div>
+    <p><span id="campeon-enemigo"></span></p>
+    <p>Vidas restantes:<span id="vidas-enemigo">3</span> </p>
+    <img src=""  id="campeon-enemigo-img" alt="img-enemigo">
+
+  </div>
+  </section>
+
+
+  <section id="mensajeAtaque">
+
+  </section>
+
+
+  <!--
+  <section id="reinicio-juego"></section>
+
+-->
+
+</body>
+</html>

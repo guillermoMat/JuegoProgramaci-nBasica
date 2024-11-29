@@ -1,0 +1,279 @@
+/*Tipos de selectores
+Tipo: cuando editamos por el nombre de etiqueta, ej: h1,p,
+
+Clase: cuando utilizamos el atributo class en la etiqueta, <h1 class="titulo"
+para utilizarlos en css se especifica:  .titulo{
+
+Id: lo mismo que clase pero con un id y tambien cambia para declararlo
+debemos utilizar:  #titulo{
+*/
+
+/*
+display:
+block: ocupan mucho espacio o toda la pantalla y pueden ser editados
+inline: ocupan un espacio pequeño y no pueden ser editados
+inline-block: ocupan un espacio pequeño pero pueden ser editados
+
+flex: permite modificar la posicion del emlemento
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Playwrite+DE+Grund:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(#EB8317 30%, #697565) no-repeat;
+  background-size: cover;
+  font-family: "Playwrite DE Grund", cursive;
+  display: flex;
+  flex-direction: column;
+  /* Coloca el contenido de la página en columna */
+}
+
+.title1 {
+  color: #10375C;
+  font-size: large;
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#seleccion-campeon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#seleccion-campeon p {
+  font-size: large;
+  text-align: center;
+}
+
+.tarjetas {
+  display: flex;
+  gap: 15px;
+  /*background-color: #257180;*/
+
+  background-color: #333333;
+  /* Un gris oscuro que contrasta con el fondo */
+  color: #F4F4F4;
+  /* Un texto claro para que sea legible */
+  margin: 15px;
+  padding: 15px;
+  border-radius: 10px;
+
+}
+
+.tarjetas img {
+  width: 150px;
+  height: 150px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.tarjetas label {
+  display: flex;
+  flex-direction: column;
+  /* Coloca el contenido en fila */
+  align-items: center;
+  /* Alinea el texto y la imagen verticalmente */
+  gap: 10px;
+  /* Espacio entre el nombre y la imagen */
+}
+
+.tarjetas label p {
+  margin: 0;
+  /* Elimina el margen del párrafo para ajustar mejor el contenido */
+  text-align: center;
+  /* Centra el texto horizontalmente */
+  cursor: pointer;
+}
+
+#seleccion-campeon input {
+  /* Para que no aparezca el redondito de seleccionar */
+  display: none;
+}
+
+#seleccion-campeon input:checked+label {
+
+  background-color: #FF5722;
+  /* Un naranja rojizo vibrante que resalta */
+  border: 2px solid #F4F4F4;
+  /* Borde claro para destacar */
+  border-radius: 15px;
+  transform: scale(1.05);
+  /* Opcional: Aumenta el tamaño ligeramente */
+  transition: all 0.3s ease;
+  /* Suaviza la transición del cambio */
+}
+
+#opc-campeon {
+  font-family: "Roboto Condensed", sans-serif;
+  width: 150px;
+  height: 50px;
+  background: transparent;
+  border-radius: 20px;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+}
+
+#gameplay {
+
+  flex-direction: column;
+  align-items: stretch;
+}
+
+#div-ataques {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  /* Añade un espacio entre los botones */
+}
+
+#div-ataques button {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 18px;
+  /* Tamaño de fuente para los botones */
+  padding: 15px 25px;
+  /* Espacio interno del botón */
+  border: none;
+  /* Elimina el borde por defecto */
+  border-radius: 15px;
+  /* Bordes redondeados */
+  cursor: pointer;
+  /* Muestra el puntero al pasar el mouse */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  /* Transiciones para hover */
+}
+
+* Estilos individuales para cada botón */ #btn-fuego {
+  background-color: #FF5722;
+  /* Naranja */
+  color: white;
+}
+
+#btn-fuego:hover {
+  background-color: #E64A19;
+  /* Color más oscuro al pasar el mouse */
+  transform: scale(1.05);
+  /* Aumenta el tamaño al hacer hover */
+}
+
+#btn-tierra {
+  background-color: #8BC34A;
+  /* Verde */
+  color: white;
+}
+
+#btn-tierra:hover {
+  background-color: #7CB342;
+  transform: scale(1.05);
+}
+
+#btn-agua {
+  background-color: #03A9F4;
+  /* Azul */
+  color: white;
+}
+
+#btn-agua:hover {
+  background-color: #039BE5;
+  transform: scale(1.05);
+}
+
+#btn-fuego:disabled,
+#btn-tierra:disabled,
+#btn-agua:disabled {
+  background-color: #BDBDBD;
+  /* Cambia el color a un gris claro */
+  color: #757575;
+  /* Cambia el texto a un gris oscuro */
+  cursor: not-allowed;
+  /* Cambia el cursor a no permitido */
+  opacity: 0.6;
+  /* Reduce la opacidad para dar efecto visual de desactivado */
+  transform: none;
+  /* Evita que se agranden o transformen al desactivar */
+}
+
+#info-jugadores {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#info-jugadores div {
+  display: flex;
+  flex-direction: column;
+  /* Alinea los elementos en columna (párrafos arriba, imagen abajo) */
+  align-items: center;
+  /* Centra el contenido (texto e imagen) horizontalmente */
+}
+
+#info-jugadores img {
+  width: 150px;
+  height: 150px;
+  border-radius: 25px;
+
+}
+
+#mensajeAtaque {
+  display: flex;
+  flex-direction: column-reverse;
+  /* Coloca los divs en columna inversa */
+  align-items: center;
+  /* Centra el contenido horizontalmente */
+  justify-content: center;
+  /* Centra el contenido verticalmente */
+}
+
+.resultado-resaltado {
+  background-color: #00BCD4;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.boton-reiniciar {
+  padding: 14px;
+  border-radius: 10px;
+  background: darksalmon;
+  border: 1px solid brown;
+  font-family: 'Roboto Condensed';
+  cursor: pointer;
+}
+
+
+/*Ejemplo de la profe*/
+.grilla {
+  display: grid;
+  grid-template-columns: 100px 100px;
+}
+
+.ataquesEjemplo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media(max-width:360px) {
+  .claseEjemplo {
+    flex-direction: column;
+  }
+}
